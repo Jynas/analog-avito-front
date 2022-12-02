@@ -217,6 +217,8 @@ export default {
 }
 
 .logo {
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 33px;
   color: #ffffff;
   margin: 0;
@@ -229,6 +231,8 @@ export default {
 
 .button__header {
   @include flex();
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   background: #ffc107;
   height: 30px;
   width: 254px;
@@ -243,9 +247,11 @@ export default {
 }
 
 .log__in {
+  font-family: "Play-Regular", serif;
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
+  font-weight: bold;
 
   span {
     cursor: pointer;

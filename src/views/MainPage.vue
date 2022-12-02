@@ -254,6 +254,7 @@ export default {
 
 .text__name__page {
   font-family: "Play-Regular", serif;
+  font-weight: bold;
   width: 100%;
   font-size: 30px;
   color: #000000;
@@ -289,6 +290,8 @@ export default {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 17px;
   border-radius: 5px;
   margin-bottom: 25px;
@@ -312,6 +315,8 @@ export default {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 17px;
   border-radius: 5px;
   margin-bottom: 25px;
@@ -328,6 +333,8 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
 
   &:hover {
     background: #dc5204;
@@ -336,6 +343,8 @@ export default {
 
 select,
 input {
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
 }
 
 .block__all__car {
@@ -357,6 +366,8 @@ input {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 17px;
   border-radius: 5px;
   margin-right: 35px;
@@ -392,6 +403,8 @@ input {
 }
 
 .text__car {
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 17px;
   margin: 10px 0 10px 0;
 }
@@ -408,6 +421,8 @@ input {
 }
 
 .text__car__two {
+  font-family: "Play-Regular", serif;
+  font-weight: bold;
   font-size: 17px;
   margin: 10px 30px 10px 0;
 }
