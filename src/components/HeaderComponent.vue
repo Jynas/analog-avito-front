@@ -1,14 +1,18 @@
 <template>
   <div class="header">
     <div class="header_inner">
-      <p class="logo">Auto<span>Sport</span></p>
+      <router-link class="logo" to="/">Auto<span>Sport</span></router-link>
       <Button
         v-if="!table"
         class="p-button-warning p-button-sm"
         icon="pi pi-plus-circle"
         label="Разместить объявление"
       />
-      <a v-if="!table" class="log__in" href="#">Вход и Регистрация</a>
+      <p v-if="!table" class="log__in">
+        <span @click="modalLogin = true">Вход</span>
+        и
+        <span @click="modalRegister = true">Регистрация</span>
+      </p>
       <Button
         v-if="table"
         class="p-button-warning"
@@ -30,36 +34,29 @@
 
       <template #default>
         <div class="block__login">
-          <div>
-            <InputText
-              v-model="register.userName"
-              :style="{ width: '95px' }"
-              placeholder="Имя"
-              type="text"
-            />
-            <InputText
-              v-model="register.userSurname"
-              :style="{ width: '95px' }"
-              placeholder="Фамилия"
-              type="text"
-            />
-          </div>
+          <InputText
+            v-model="register.userName"
+            placeholder="Имя"
+            type="text"
+          />
+          <InputText
+            v-model="register.userSurname"
+            placeholder="Фамилия"
+            type="text"
+          />
           <InputText
             v-model="register.userLogin"
-            :style="{ width: '195px' }"
             placeholder="Логин"
             type="text"
           />
           <Password
             v-model="register.password"
             :feedback="true"
-            :style="{ width: '195px' }"
             placeholder="Пароль"
           />
           <Password
             v-model="register.passwordTwo"
             :feedback="false"
-            :style="{ width: '195px' }"
             placeholder="Подтвердить"
           />
         </div>
@@ -79,21 +76,15 @@
       header="Header"
     >
       <template #header>
-        <p class="text__header__modal">Вход</p>
+        <p class="text__header__modal">Авторизация</p>
       </template>
 
       <template #default>
         <div class="block__login">
-          <InputText
-            v-model="login.userName"
-            :style="{ width: '195px' }"
-            placeholder="Логин"
-            type="text"
-          />
+          <InputText v-model="login.userName" placeholder="Логин" type="text" />
           <Password
             v-model="login.password"
             :feedback="false"
-            :style="{ width: '195px' }"
             placeholder="Пароль"
           />
         </div>
@@ -226,10 +217,10 @@ export default {
 }
 
 .logo {
-  font-family: Play-Bold;
   font-size: 33px;
   color: #ffffff;
   margin: 0;
+  text-decoration: none;
 
   span {
     color: #ffc107;
@@ -238,7 +229,6 @@ export default {
 
 .button__header {
   @include flex();
-  font-family: Play-Bold;
   background: #ffc107;
   height: 30px;
   width: 254px;
@@ -253,10 +243,13 @@ export default {
 }
 
 .log__in {
-  font-family: Play-Bold;
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
+
+  span {
+    cursor: pointer;
+  }
 }
 
 .img__button {

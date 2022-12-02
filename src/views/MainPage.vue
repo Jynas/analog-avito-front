@@ -144,7 +144,7 @@
             :options="TimeStartOptions"
             class="p-inputtext-sm"
             optionLabel="name"
-            placeholder="Сортировка"
+            placeholder="Дата"
           ></Dropdown>
         </div>
         <div class="block__all__cars">
@@ -253,7 +253,7 @@ export default {
 }
 
 .text__name__page {
-  font-family: Play-Bold;
+  font-family: "Play-Regular", serif;
   width: 100%;
   font-size: 30px;
   color: #000000;
@@ -289,7 +289,6 @@ export default {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
-  font-family: Play-Bold;
   font-size: 17px;
   border-radius: 5px;
   margin-bottom: 25px;
@@ -313,7 +312,6 @@ export default {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
-  font-family: Play-Bold;
   font-size: 17px;
   border-radius: 5px;
   margin-bottom: 25px;
@@ -330,7 +328,6 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  font-family: Play-Bold;
 
   &:hover {
     background: #dc5204;
@@ -339,7 +336,6 @@ export default {
 
 select,
 input {
-  font-family: Play-Bold;
 }
 
 .block__all__car {
@@ -361,7 +357,6 @@ input {
   height: 30px;
   border: 1px solid #000000;
   background: #ffffff;
-  font-family: Play-Bold;
   font-size: 17px;
   border-radius: 5px;
   margin-right: 35px;
@@ -397,7 +392,6 @@ input {
 }
 
 .text__car {
-  font-family: Play-Bold;
   font-size: 17px;
   margin: 10px 0 10px 0;
 }
@@ -414,7 +408,6 @@ input {
 }
 
 .text__car__two {
-  font-family: Play-Bold;
   font-size: 17px;
   margin: 10px 30px 10px 0;
 }
