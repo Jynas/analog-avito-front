@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .footer {
   border-top: 1px solid #bbbbbb;
   width: 100%;

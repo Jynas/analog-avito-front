@@ -12,6 +12,11 @@ const routes = [
     name: "CreateAd",
     component: () => import("../views/CreateAd.vue"),
   },
+  {
+    path: "/car",
+    name: "InfoCar",
+    component: () => import("../views/InfoCar.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -158,12 +158,12 @@
             </template>
             <template #title
               ><p class="p-card-title text__card__max">
-                Название машины
+                {{ car.name }}
               </p></template
             >
-            <template #content> Описание машины</template>
+            <template #content>{{ car.info }}</template>
             <template #footer>
-              <Button label="Просмотр" />
+              <Button label="Просмотр" @click="viewingCar(car.id)" />
             </template>
           </Card>
         </div>
@@ -176,6 +176,7 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
 import FooterComponent from "@/components/FooterComponent";
+import router from "@/router";
 
 export default {
   name: "MainPage",
@@ -194,7 +195,69 @@ export default {
       PriceCarMax: null,
       TimeStart: null,
       SortCar: null,
-      AllCars: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      AllCars: [
+        { id: 0, name: "Lada", info: "Информация о машине", img: "url" },
+        {
+          id: 1,
+          name: "Volvo",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 2,
+          name: "BMW",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 3,
+          name: "Toyota",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 4,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 5,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 6,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 7,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 8,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 9,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+        {
+          id: 10,
+          name: "Название машины",
+          info: "Информация о машине",
+          img: "url",
+        },
+      ],
       marks: [
         { name: "Lada" },
         { name: "Volvo" },
@@ -230,11 +293,15 @@ export default {
     onResize() {
       window.innerWidth <= 800 ? (this.table = true) : (this.table = false);
     },
+    viewingCar(carId) {
+      console.log(carId);
+      router.push({ path: "/car", query: { id: carId } });
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__main__page {
   display: flex;
   justify-content: center;
@@ -269,8 +336,8 @@ export default {
 .block__all__cars {
   display: flex;
   padding: 1rem 0;
-  gap: 1rem;
-  justify-content: space-between;
+  gap: 2rem;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -356,7 +423,7 @@ input {
 .block__select__sort {
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1rem;
   margin: 30px 0 0 0;
 }

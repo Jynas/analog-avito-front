@@ -16,6 +16,7 @@ import Password from "primevue/password";
 import Card from "primevue/card";
 import Dialog from "primevue/dialog";
 import Galleria from "primevue/galleria";
+import Carousel from "primevue/carousel";
 import "primevue/resources/themes/saga-orange/theme.css";
 import "primeicons/primeicons.css";
 import "primevue/resources/primevue.min.css";
@@ -38,4 +39,5 @@ app
   .component("Calendar", Calendar)
   .component("Textarea", Textarea)
   .component("FileUpload", FileUpload)
-  .component("Galleria", Galleria);
+  .component("Galleria", Galleria)
+  .component("Carousel", Carousel);
