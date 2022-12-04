@@ -21,10 +21,12 @@
             :value="imagesCar"
           >
             <template #item="slotProps">
-              <img
+              <Image
                 :alt="slotProps.item.alt"
                 :src="slotProps.item.src"
                 class="img__galleria"
+                preview
+                style="height: 300px; width: 100%; object-fit: cover"
               />
             </template>
             <template #thumbnail="slotProps">
@@ -260,10 +262,17 @@ export default {
   width: 100%;
   height: 300px;
   object-fit: cover;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .img__galleria__down {
   width: 60px;
+  height: 40px;
 }
 
 .block__seller {

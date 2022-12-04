@@ -9,6 +9,7 @@ import Button from "primevue/button";
 import TieredMenu from "primevue/tieredmenu";
 import InputNumber from "primevue/inputnumber";
 import InputText from "primevue/inputtext";
+import Image from "primevue/image";
 import Textarea from "primevue/textarea";
 import FileUpload from "primevue/fileupload";
 import Calendar from "primevue/calendar";
@@ -40,4 +41,5 @@ app
   .component("Textarea", Textarea)
   .component("FileUpload", FileUpload)
   .component("Galleria", Galleria)
-  .component("Carousel", Carousel);
+  .component("Carousel", Carousel)
+  .component("Image", Image);
