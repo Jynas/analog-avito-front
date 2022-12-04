@@ -268,14 +268,14 @@ export default {
 
 .block__all__cars {
   display: flex;
-  padding: 15px 0;
+  padding: 1rem 0;
   gap: 1rem;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .block__info__car {
-  padding: 30px;
+  padding: 2rem;
   width: 100%;
   display: flex;
   background: #ffffff;
@@ -399,7 +399,7 @@ input {
 .img__car {
   width: auto;
   height: auto;
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 
 .text__car {
@@ -439,7 +439,7 @@ input {
 @media screen and (max-width: 800px) {
   .wrapper__main__page__inner {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 1rem;
   }
   .text__card__max {
     width: 200px;

@@ -2,12 +2,14 @@
   <div class="header">
     <div class="header_inner">
       <router-link class="logo" to="/">Auto<span>Sport</span></router-link>
-      <Button
-        v-if="!table"
-        class="p-button-warning p-button-sm"
-        icon="pi pi-plus-circle"
-        label="Разместить объявление"
-      />
+      <router-link class="router__create__ad" to="/create/ad">
+        <Button
+          v-if="!table"
+          class="p-button-warning p-button-sm"
+          icon="pi pi-plus-circle"
+          label="Разместить объявление"
+        />
+      </router-link>
       <p v-if="!table" class="log__in">
         <span @click="modalLogin = true">Вход</span>
         и
@@ -25,6 +27,7 @@
     <Dialog
       v-model:visible="modalRegister"
       :breakpoints="{ '500px': '90vw' }"
+      :modal="true"
       :style="{ width: '400px' }"
       header="Header"
     >
@@ -33,7 +36,7 @@
       </template>
 
       <template #default>
-        <div class="block__login">
+        <div class="block__login" style="margin-top: 1rem">
           <InputText
             v-model="register.userName"
             placeholder="Имя"
@@ -72,6 +75,7 @@
     <Dialog
       v-model:visible="modalLogin"
       :breakpoints="{ '500px': '90vw' }"
+      :modal="true"
       :style="{ width: '400px' }"
       header="Header"
     >
@@ -80,7 +84,7 @@
       </template>
 
       <template #default>
-        <div class="block__login">
+        <div class="block__login" style="margin-top: 1rem">
           <InputText v-model="login.userName" placeholder="Логин" type="text" />
           <Password
             v-model="login.password"
@@ -93,6 +97,7 @@
         <Button
           class="p-button-warning p-button-sm"
           label="Войти"
+          style="margin-top: 1rem"
           @click="handleSubmitLogin"
         />
       </template>
@@ -121,15 +126,11 @@ export default {
       LoginItems: [
         {
           label: "Разместить объявление",
-          to: "/",
+          to: "/create/ad",
           icon: "pi pi-plus-circle",
-          command: () => {
-            console.log("Разместить объявление");
-          },
         },
         {
           label: "Регистрация",
-          to: "/",
           icon: "pi pi-user-plus",
           visible: () => this.isLogin !== true,
           command: () => {
@@ -138,7 +139,6 @@ export default {
         },
         {
           label: "Вход",
-          to: "/",
           icon: "pi pi-user",
           visible: () => this.isLogin !== true,
           command: () => {
@@ -160,7 +160,6 @@ export default {
         },
         {
           label: "Выйти",
-          to: "/",
           icon: "pi pi-power-off",
           visible: () => this.isLogin === true,
           command: () => {
@@ -262,6 +261,10 @@ export default {
   width: 15px;
   height: 15px;
   margin-right: 14px;
+}
+
+.router__create__ad {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1000px) {

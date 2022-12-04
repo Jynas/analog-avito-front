@@ -7,6 +7,11 @@ const routes = [
     name: "Main",
     component: MainPage,
   },
+  {
+    path: "/create/ad",
+    name: "CreateAd",
+    component: () => import("../views/CreateAd.vue"),
+  },
 ];
 
 const router = createRouter({
